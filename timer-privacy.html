@@ -3,182 +3,101 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Privacy policy for the Zendesk Timer Chrome extension for Attentive."
-    >
-    <title>Privacy Policy — Zendesk Timer</title>
+    <meta name="description" content="Privacy policy for the Offsight Timer browser extension.">
+    <title>Privacy Policy | Offsight Timer</title>
     <link rel="stylesheet" href="./site.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Zendesk Timer home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>Zendesk Timer</span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a aria-current="page" href="./privacy-policy.html">Privacy policy</a>
-      </nav>
+    <header>
+      <a class="brand" href="./index.html">Offsight Timer</a>
+      <a aria-current="page" href="./privacy-policy.html">Privacy Policy</a>
     </header>
 
-    <main class="policy-layout">
-      <aside class="policy-summary" aria-label="Policy summary">
-        <p class="eyebrow">Privacy policy</p>
-        <h1>How Zendesk Timer handles data</h1>
-        <p class="effective-date">Effective September 24, 2026</p>
+    <main>
+      <article>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: September 24, 2026</p>
+
         <p>
-          Zendesk Timer is an internal workforce extension for authorized Attentive personnel.
+          Offsight Timer is a browser extension that helps authorized users record time spent on
+          work items. This policy explains what information the extension handles and how that
+          information is used.
         </p>
-        <a class="text-link" href="./index.html">← Return home</a>
-      </aside>
 
-      <article class="policy-content">
-        <section aria-labelledby="purpose">
-          <h2 id="purpose">Purpose and scope</h2>
-          <p>
-            Zendesk Timer tracks time spent working a single Zendesk ticket across Zendesk and
-            Attentive, writes calculated Effort to Zendesk, and sends completed timer-session
-            records to an Attentive-controlled operational service. This policy describes the data
-            handled by the Chrome extension and its companion timer service.
-          </p>
-        </section>
+        <h2>Information we handle</h2>
+        <p>Offsight Timer may handle:</p>
+        <ul>
+          <li>a browser profile email and work account identifier;</li>
+          <li>work-item and company identifiers;</li>
+          <li>work-page URLs and related page context;</li>
+          <li>timer start and stop times, durations, idle time, and prompt responses;</li>
+          <li>work-item status, assignment, availability, and time-entry information; and</li>
+          <li>limited authentication context needed to submit time to a supported work platform.</li>
+        </ul>
+        <p>
+          The extension does not collect browser passwords or Google OAuth access tokens. Raw page
+          content and authentication credentials are not included in completed timer records sent
+          to the timer service.
+        </p>
 
-        <section aria-labelledby="information">
-          <h2 id="information">Information handled</h2>
-          <p>The extension handles the following information when needed for its single purpose:</p>
-          <ul>
-            <li>
-              the primary Chrome profile email, used only to confirm that it belongs to
-              <code>attentivemobile.com</code> or <code>concierge.attentivemobile.com</code>;
-            </li>
-            <li>the agent's Zendesk user ID;</li>
-            <li>
-              Zendesk ticket IDs, company IDs, ticket status, assignment, availability signals,
-              and the configured Effort field value;
-            </li>
-            <li>Zendesk and Attentive work URLs associated with a timer session;</li>
-            <li>
-              timer start and stop times, work-domain duration, idle duration, prompt decisions,
-              and diagnostic event timing;
-            </li>
-            <li>
-              Zendesk form fields, visible ticket text, and ticket comments only as needed to
-              identify structured timer context such as a company ID; and
-            </li>
-            <li>
-              session-scoped Zendesk authentication context, including a CSRF token, when needed
-              to perform direct Effort writeback.
-            </li>
-          </ul>
-          <p>
-            Raw ticket-comment text and general visible page text are not retained or uploaded as
-            timer-session records. The Zendesk CSRF token and browser-session credentials are not
-            sent to the timer API. The extension does not collect a Google password or Google OAuth
-            access token.
-          </p>
-        </section>
+        <h2>How we use information</h2>
+        <p>Information is used only to:</p>
+        <ul>
+          <li>confirm that a user is authorized to use the extension;</li>
+          <li>operate, display, stop, and recover timers;</li>
+          <li>calculate and submit work-time records;</li>
+          <li>store completed timer sessions;</li>
+          <li>prevent duplicate processing and retry failed operations; and</li>
+          <li>maintain security and troubleshoot operational problems.</li>
+        </ul>
 
-        <section aria-labelledby="use">
-          <h2 id="use">How information is used</h2>
-          <p>Information is used only to:</p>
-          <ul>
-            <li>authorize workforce access to timer functionality;</li>
-            <li>start, display, stop, and recover one active ticket timer;</li>
-            <li>attribute work time between Zendesk, Attentive, idle time, and other activity;</li>
-            <li>calculate and write Zendesk Effort;</li>
-            <li>store completed operational timer records;</li>
-            <li>prevent duplicate session processing and safely retry failed operations; and</li>
-            <li>investigate and resolve operational failures.</li>
-          </ul>
-        </section>
+        <h2>Storage and transmission</h2>
+        <p>
+          Active timer state and retry information may be stored locally in browser extension
+          storage. Completed timer records are transmitted over HTTPS to company-controlled
+          services and stored in an operational database. Time entries may also be submitted to a
+          supported work platform through the user's authenticated browser session.
+        </p>
 
-        <section aria-labelledby="storage">
-          <h2 id="storage">Storage and transmission</h2>
-          <p>
-            Active timer state, ticket context, authentication context needed for writeback, and
-            retry information may be stored in Chrome extension storage on the user's device.
-            Completed timer sessions are transmitted over HTTPS to the Attentive timer API and
-            stored in its associated operational database.
-          </p>
-          <p>
-            Uploaded session records may include the agent email and Zendesk user ID, ticket and
-            company IDs, work URLs, start and stop timestamps, work and idle durations, structured
-            URL and network-event metadata, stop reason, prompt-related timing, and Zendesk
-            writeback result. Request and response bodies observed from Zendesk or Attentive are
-            not included as timer-session data.
-          </p>
-          <p>
-            Zendesk Effort is currently read and written directly through the agent's authenticated
-            Zendesk browser session. The browser may attach its Zendesk cookies to those Zendesk
-            requests; the extension does not upload the cookie values to the timer API.
-          </p>
-        </section>
+        <h2>Sharing</h2>
+        <p>
+          We do not sell timer data. We do not use timer data for advertising, lending, or credit
+          decisions. Information is shared only when needed to operate the extension and supported
+          services, maintain security, comply with law, or complete an approved corporate
+          transaction.
+        </p>
 
-        <section aria-labelledby="retention">
-          <h2 id="retention">Retention and user requests</h2>
-          <p>
-            Local and server records are retained according to Attentive's applicable workforce,
-            operational, security, and legal retention requirements. Pending, failed, or ambiguous
-            operations may be retained until reconciled. Authorized users may request access,
-            correction, or deletion through their Attentive administrator or the applicable
-            internal Privacy, Security, or IT support channel, subject to company policy and legal
-            retention obligations.
-          </p>
-        </section>
+        <h2>Retention</h2>
+        <p>
+          Records are retained according to applicable workforce, operational, security, and legal
+          requirements. Pending or failed operations may be retained until they are resolved.
+        </p>
 
-        <section aria-labelledby="sharing">
-          <h2 id="sharing">Sharing and prohibited uses</h2>
-          <p>
-            Timer data is not sold, used for personalized advertising, or used for lending or
-            credit decisions. It is transferred only when necessary to operate Zendesk and
-            Attentive services, protect security, comply with law, or complete an approved corporate
-            transaction.
-          </p>
-          <p>
-            Human access is limited to circumstances allowed by the Chrome Web Store User Data
-            Policy, including explicit authorization or consent, security purposes, legal
-            obligations, and permitted aggregated or de-identified internal operations.
-          </p>
-        </section>
+        <h2>Security</h2>
+        <p>
+          Personal and sensitive information is transmitted using HTTPS. Access to operational
+          systems is restricted through company access controls. All executable extension code is
+          included in the extension package; the extension does not download or execute remote
+          code.
+        </p>
 
-        <section aria-labelledby="limited-use">
-          <h2 id="limited-use">Chrome Web Store Limited Use</h2>
-          <p>
-            The use of information received from Chrome APIs adheres to the Chrome Web Store User
-            Data Policy, including the Limited Use requirements. Information obtained through
-            Chrome permissions is used only to provide or improve the extension's single
-            user-facing purpose.
-          </p>
-        </section>
+        <h2>Chrome Web Store Limited Use</h2>
+        <p>
+          The use of information received from Chrome APIs adheres to the Chrome Web Store User
+          Data Policy, including the Limited Use requirements. Information obtained through Chrome
+          permissions is used only to provide or improve the extension's user-facing timer
+          functionality.
+        </p>
 
-        <section aria-labelledby="security">
-          <h2 id="security">Security</h2>
-          <p>
-            Personal and sensitive information is transmitted using HTTPS. Access to operational
-            systems is restricted through company access controls. The extension requests only the
-            Chrome and host permissions needed for timer operation, recovery, profile
-            authorization, scoped prompts, upload, and Zendesk writeback.
-          </p>
-          <p>
-            All executable extension code is included in the distributed extension package. The
-            extension does not download or execute remotely hosted code.
-          </p>
-        </section>
-
-        <section aria-labelledby="contact">
-          <h2 id="contact">Questions and requests</h2>
-          <p>
-            Authorized users should contact their Attentive administrator or the applicable
-            internal Privacy, Security, or IT support channel with questions or requests concerning
-            this policy or their timer data.
-          </p>
-        </section>
+        <h2>Your choices and requests</h2>
+        <p>
+          Authorized users may contact their administrator or internal Privacy, Security, or IT
+          support channel to ask questions or request access, correction, or deletion, subject to
+          applicable policy and legal retention requirements.
+        </p>
       </article>
     </main>
 
-    <footer class="site-footer">
-      <span>Zendesk Timer for Attentive</span>
-      <a href="./privacy-policy.html">Privacy policy</a>
-    </footer>
+    <footer>© 2026 Offsight Timer</footer>
   </body>
 </html>
